@@ -1,0 +1,23 @@
+spring:
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username:
+    password:
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+
+logging:  level:    org.hibernate.SQL: debug
+    #org.hibernate.SQL: trace <- 쿼리시 파라메터까지 볼 수 있음. 
